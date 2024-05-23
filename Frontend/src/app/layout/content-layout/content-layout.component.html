@@ -1,0 +1,28 @@
+<mat-toolbar>TravelBuddy
+
+  <div class="example-button-row">
+    <button mat-button (click)="visitHome()">Home</button>
+    <button mat-button (click)="visitHotels()">Hotel</button>
+    <button mat-button (click)="visitRental()">Rental</button>
+    <button mat-button (click)="visitFlights()">Flights</button>
+    <button mat-button (click)="visitDiscover()">Discover</button>
+  </div>
+  <span class="example-spacer"></span>
+  <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon" (click)="visitProfile()">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>
+
+<mat-toolbar class="footer-toolbar">
+  © 2024 TravelBuddy
+  <div class="container">
+    <span class="spacer"></span>
+  </div>
+</mat-toolbar>

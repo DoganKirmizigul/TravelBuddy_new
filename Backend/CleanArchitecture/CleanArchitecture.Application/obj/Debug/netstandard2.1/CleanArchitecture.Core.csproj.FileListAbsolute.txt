@@ -1,0 +1,20 @@
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netstandard2.1\CleanArchitecture.Core.deps.json
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netstandard2.1\CleanArchitecture.Core.dll
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netstandard2.1\CleanArchitecture.Core.pdb
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.csproj.AssemblyReference.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.AssemblyInfoInputs.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.AssemblyInfo.cs
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.dll
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.pdb
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netstandard2.1\CleanArchitecture.Core.deps.json
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netstandard2.1\CleanArchitecture.Core.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netstandard2.1\CleanArchitecture.Core.pdb
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.csproj.AssemblyReference.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.AssemblyInfoInputs.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.AssemblyInfo.cs
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.pdb

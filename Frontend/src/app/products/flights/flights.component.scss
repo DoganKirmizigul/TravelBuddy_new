@@ -1,0 +1,21 @@
+.card-container {
+    display: flex;
+    flex-direction: column;  /* Stacks children vertically */
+    align-items: center;    /* Aligns cards in the center of the container horizontally */
+    margin-top: 20px;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  
+  .example-card {
+    max-width: 400px;
+    margin: 20px;  /* Space between cards */
+  }
+  
+  .no-results {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: grey;
+  }
+  

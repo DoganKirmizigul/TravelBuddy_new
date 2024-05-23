@@ -1,0 +1,85 @@
+// .container {
+//     display: flex;
+//     align-items: center;
+//   }
+
+.mat-form-field {
+  flex: 1;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+}
+
+/* your-component.css */
+.grid-container {
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically if you want vertical centering too */
+  // height: 100vh; /* Adjust height to use the full viewport if desired */
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.center-content {
+  height: 100vh;
+  /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::after {
+  content: "";
+  background: url(assets/bg.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.ngx-toastr .toast-title {
+  font-weight: 600;
+}
+
+:root {
+  // --animate-duration: 800ms;
+  --animate-delay: 3s;
+}
+
+.fullscreen.background-image::after {
+  background-color: black;
+     /* opacity: 0.5; */
+}
+
+.search-card.mat-card {
+  padding: 0px!important;
+  margin: 10px;
+  box-shadow: 10px 20px 10px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+.search-card .mat-card-header {
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-card .mat-card-header .mat-card-title {
+  margin: 10px;
+}
+
+.search-card .mat-icon {
+  margin: 8px;
+}

@@ -1,0 +1,119 @@
+<div class="widget widget-mycart p-cb">
+
+</div>
+
+<mat-card class="search-card" style="margin-top: 100px; background: aliceblue;">
+    <mat-card-header>
+        <mat-card-title>Search Hotels</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="grid-container">
+            <mat-grid-list cols="2" rowHeight="100px" gutterSize="120px">
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Search Location</mat-label>
+                        <input type="text" placeholder="Search Location" matInput formControlName="location"
+                            [matAutocomplete]="auto" [ngClass]="{ 'is-invalid': submitted && f['location'].errors }">
+
+                        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{ option.label }}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <div *ngIf="submitted && f['location'].errors" class="invalid-feedback">
+                            <div *ngIf="f['location'].errors['required']">Location is required </div>
+                        </div>
+                    </mat-form-field>
+
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Start Date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="fromDate"
+                            [ngClass]="{ 'is-invalid': submitted && f['fromDate'].errors }">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <div *ngIf="submitted && f['fromDate'].errors" class="invalid-feedback">
+                            <div *ngIf="f['fromDate'].errors['required']">From Date is required </div>
+                        </div>
+                    </mat-form-field>
+                    <div class="icon-wrapper">
+                        <mat-icon>navigate_next</mat-icon>
+                    </div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>End Date</mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="toDate"
+                            [ngClass]="{ 'is-invalid': submitted && f['toDate'].errors }">
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                        <div *ngIf="submitted && f['toDate'].errors" class="invalid-feedback">
+                            <div *ngIf="f['toDate'].errors['required']">To Date is required </div>
+                        </div>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+        </div>
+
+        <mat-grid-list cols="1" rowHeight="50px" class="center-content">
+            <mat-grid-tile>
+                <button mat-raised-button color="primary">Search Hotels</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+
+</mat-card>
+
+<!-- <div class="grid-container">
+    <mat-grid-list cols="1" *ngFor="let item of searchResult">
+        <mat-grid-tile>
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{item.hotel_name}}</mat-card-title>
+                  <mat-card-subtitle>{{item.address}}</mat-card-subtitle>
+                </mat-card-header>
+                <img height="400px" width="300px" mat-card-image src={{item.max_photo_url}} alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Review: {{item.review_score}}
+                  </p>
+                  <p>
+                    Price: {{item.price_breakdown.currency}} {{item.price_breakdown.gross_price}}
+                  </p>
+                </mat-card-content>
+                
+              </mat-card>
+        </mat-grid-tile>
+        
+
+    </mat-grid-list>
+</div>
+   -->
+
+
+<div class="card-container">
+    <mat-card *ngFor="let item of searchResult" class="example-card">
+        <mat-card-header>
+            <a href="{{item.url}}" target="_blank">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{item.hotel_name}}</mat-card-title>
+                <mat-card-subtitle>{{item.address}}</mat-card-subtitle>
+            </a>
+        </mat-card-header>
+        <img style="height: 400px; width: 400px;" mat-card-image src={{item.max_photo_url}} alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Review: {{item.review_score}}
+            </p>
+            <p>
+                Price: {{item.price_breakdown.currency}} {{item.price_breakdown.gross_price}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <div *ngIf="searchResult.length === 0" class="no-results">
+        No results found.
+      </div>
+</div>

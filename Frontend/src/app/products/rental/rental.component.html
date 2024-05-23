@@ -1,0 +1,102 @@
+<mat-card class="search-card" style="margin-top: 100px; background: aliceblue;">
+    <mat-card-header>
+        <mat-card-title>Search Rental</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="grid-container">
+            <mat-grid-list cols="2" rowHeight="100px" gutterSize="120px">
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>From</mat-label>
+                        <input type="text" placeholder="From" matInput formControlName="from"
+                            [matAutocomplete]="auto1" [ngClass]="{ 'is-invalid': submitted && f['from'].errors }">
+    
+                        <mat-autocomplete #auto1="matAutocomplete" [displayWith]="displayFn">
+                            <mat-option *ngFor="let option of filteredFromOptions | async" [value]="option">
+                                {{ option.name }}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <div *ngIf="submitted && f['from'].errors" class="invalid-feedback">
+                            <div *ngIf="f['from'].errors['required']">From is required </div>
+                        </div>
+                    </mat-form-field>
+        
+                    <div class="icon-wrapper">
+                        <mat-icon>navigate_next</mat-icon>
+                    </div>
+        
+                    <mat-form-field appearance="fill">
+                        <mat-label>To</mat-label>
+                        <input type="text" placeholder="To" matInput formControlName="to"
+                            [matAutocomplete]="auto2" [ngClass]="{ 'is-invalid': submitted && f['to'].errors }">
+    
+                        <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayFn">
+                            <mat-option *ngFor="let optionx of filteredToOptions | async" [value]="optionx">
+                                {{ optionx.name }}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <div *ngIf="submitted && f['to'].errors" class="invalid-feedback">
+                            <div *ngIf="f['to'].errors['required']">To is required </div>
+                        </div>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Departure Date</mat-label>
+                        <input matInput [matDatepicker]="picker1" formControlName="fromDate"
+                            [ngClass]="{ 'is-invalid': submitted && f['fromDate'].errors }">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                        <div *ngIf="submitted && f['fromDate'].errors" class="invalid-feedback">
+                            <div *ngIf="f['fromDate'].errors['required']">Departure date is required </div>
+                        </div>
+                    </mat-form-field>
+
+                    <div class="icon-wrapper">
+                        <mat-icon>navigate_next</mat-icon>
+                    </div>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Arrival Date</mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="toDate"
+                            [ngClass]="{ 'is-invalid': submitted && f['toDate'].errors }">
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                        <div *ngIf="submitted && f['toDate'].errors" class="invalid-feedback">
+                            <div *ngIf="f['toDate'].errors['required']">Arrival date is required </div>
+                        </div>
+                    </mat-form-field>
+                </mat-grid-tile>
+        
+            </mat-grid-list>
+        </div>
+    
+        <mat-grid-list cols="1" rowHeight="50px" class="center-content">
+            <mat-grid-tile>
+                <button mat-raised-button color="primary">Search Rental</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</mat-card>
+
+<div class="card-container">
+    <mat-card *ngFor="let item of searchResult" class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{item.pricing_info.base_currency}} {{item.pricing_info.drive_away_price}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Pickup: {{item.route_info.pickup.address}}
+            </p>
+            <p>
+                Dropoff: {{item.route_info.dropoff.address}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <div *ngIf="searchResult.length === 0" class="no-results">
+        No results found.
+      </div>
+</div>

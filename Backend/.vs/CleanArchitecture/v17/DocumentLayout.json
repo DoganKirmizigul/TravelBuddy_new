@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dogan\\Desktop\\TravelBuddy Yeni\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E3ED7FF-7F68-45B9-A284-85DCD5299DE6}|CleanArchitecture\\CleanArchitecture.WebApi\\CleanArchitecture.WebApi.csproj|c:\\users\\dogan\\desktop\\travelbuddy yeni\\backend\\cleanarchitecture\\cleanarchitecture.webapi\\properties\\servicedependencies\\travelbuddy-backend - web deploy\\apis1.arm.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E3ED7FF-7F68-45B9-A284-85DCD5299DE6}|CleanArchitecture\\CleanArchitecture.WebApi\\CleanArchitecture.WebApi.csproj|solutionrelative:cleanarchitecture\\cleanarchitecture.webapi\\properties\\servicedependencies\\travelbuddy-backend - web deploy\\apis1.arm.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E3ED7FF-7F68-45B9-A284-85DCD5299DE6}|CleanArchitecture\\CleanArchitecture.WebApi\\CleanArchitecture.WebApi.csproj|c:\\users\\dogan\\desktop\\travelbuddy yeni\\backend\\cleanarchitecture\\cleanarchitecture.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E3ED7FF-7F68-45B9-A284-85DCD5299DE6}|CleanArchitecture\\CleanArchitecture.WebApi\\CleanArchitecture.WebApi.csproj|solutionrelative:cleanarchitecture\\cleanarchitecture.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "apis1.arm.json",
+              "DocumentMoniker": "C:\\Users\\Dogan\\Desktop\\TravelBuddy Yeni\\Backend\\CleanArchitecture\\CleanArchitecture.WebApi\\Properties\\ServiceDependencies\\travelbuddy-backend - Web Deploy\\apis1.arm.json",
+              "RelativeDocumentMoniker": "CleanArchitecture\\CleanArchitecture.WebApi\\Properties\\ServiceDependencies\\travelbuddy-backend - Web Deploy\\apis1.arm.json",
+              "ToolTip": "C:\\Users\\Dogan\\Desktop\\TravelBuddy Yeni\\Backend\\CleanArchitecture\\CleanArchitecture.WebApi\\Properties\\ServiceDependencies\\travelbuddy-backend - Web Deploy\\apis1.arm.json",
+              "RelativeToolTip": "CleanArchitecture\\CleanArchitecture.WebApi\\Properties\\ServiceDependencies\\travelbuddy-backend - Web Deploy\\apis1.arm.json",
+              "ViewState": "AQIAABkAAAAAAAAAAAAawEAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-21T22:34:30.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dogan\\Desktop\\TravelBuddy Yeni\\Backend\\CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Dogan\\Desktop\\TravelBuddy Yeni\\Backend\\CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "RelativeToolTip": "CleanArchitecture\\CleanArchitecture.WebApi\\appsettings.json",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-21T22:33:33.393Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

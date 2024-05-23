@@ -1,0 +1,34 @@
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.deps.json
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.runtimeconfig.json
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.pdb
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Core.dll
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Core.pdb
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.AssemblyInfo.cs
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArc.38F44B56.Up2Date
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\refint\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.pdb
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.genruntimeconfig.cache
+C:\Users\Dogan\Desktop\son\8-20\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\ref\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.deps.json
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.runtimeconfig.json
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Infrastructure.pdb
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Core.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net6.0\CleanArchitecture.Core.pdb
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.AssemblyInfo.cs
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArc.38F44B56.Up2Date
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\refint\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.pdb
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.genruntimeconfig.cache
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\ref\CleanArchitecture.Infrastructure.dll
