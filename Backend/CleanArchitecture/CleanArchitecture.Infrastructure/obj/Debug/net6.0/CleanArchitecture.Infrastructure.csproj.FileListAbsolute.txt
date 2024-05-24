@@ -32,3 +32,4 @@ C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitect
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.pdb
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.genruntimeconfig.cache
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\ref\CleanArchitecture.Infrastructure.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net6.0\CleanArchitecture.Infrastructure.sourcelink.json

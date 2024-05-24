@@ -636,3 +636,4 @@ C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitect
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.WebApi\obj\Debug\net6.0\CleanArchitecture.WebApi.pdb
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.WebApi\obj\Debug\net6.0\CleanArchitecture.WebApi.genruntimeconfig.cache
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.WebApi\obj\Debug\net6.0\ref\CleanArchitecture.WebApi.dll
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.WebApi\obj\Debug\net6.0\CleanArchitecture.WebApi.sourcelink.json

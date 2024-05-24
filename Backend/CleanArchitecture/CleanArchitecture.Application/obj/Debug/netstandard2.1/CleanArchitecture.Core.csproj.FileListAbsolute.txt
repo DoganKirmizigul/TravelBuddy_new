@@ -18,3 +18,4 @@ C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitect
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.csproj.CoreCompileInputs.cache
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.dll
 C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.pdb
+C:\Users\Dogan\Desktop\TravelBuddy Yeni\Backend\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netstandard2.1\CleanArchitecture.Core.sourcelink.json

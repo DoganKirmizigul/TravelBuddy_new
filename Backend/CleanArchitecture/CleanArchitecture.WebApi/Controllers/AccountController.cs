@@ -11,9 +11,12 @@ namespace CleanArchitecture.WebApi.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;
-        public AccountController(IAccountService accountService)
+        private IAuthenticatedUserService _authenticatedUser;
+
+        public AccountController(IAccountService accountService, IAuthenticatedUserService authenticatedUser)
         {
             _accountService = accountService;
+            _authenticatedUser = authenticatedUser;
         }
         [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
@@ -44,6 +47,21 @@ namespace CleanArchitecture.WebApi.Controllers
 
             return Ok(await _accountService.ResetPassword(model));
         }
+
+        [HttpGet("get-user")]
+        public async Task<IActionResult> GetUser()
+        {
+            string userId = _authenticatedUser.UserId;
+            return Ok(await _accountService.GetUsreAsync(userId));
+        }
+
+        [HttpPost("save-user")]
+        public async Task<IActionResult> SaveUser(UserDTO userDto)
+        {
+            userDto.Id = _authenticatedUser.UserId;
+            return Ok(await _accountService.SaveUsreAsync(userDto));
+        }
+
         private string GenerateIPAddress()
         {
             if (Request.Headers.ContainsKey("X-Forwarded-For"))

@@ -238,5 +238,36 @@ namespace CleanArchitecture.Infrastructure.Services
                 throw new ApiException($"Error occured while reseting the password.");
             }
         }
+
+        public async Task<Response<UserDTO>> GetUsreAsync(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            UserDTO userDto = null;
+
+            if (user != null)
+            {
+                userDto = new UserDTO()
+                {
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                };
+            }
+
+            return new Response<UserDTO>(userDto);
+        }
+
+        public async Task<Response<string>> SaveUsreAsync(UserDTO userDto)
+        {
+            var user = await _userManager.FindByIdAsync(userDto.Id);
+            user.FirstName = userDto.FirstName;
+            user.LastName = userDto.LastName;
+
+            await _userManager.UpdateAsync(user);
+
+            return new Response<string>("User profile udpated.");
+        }
+
     }
 }
