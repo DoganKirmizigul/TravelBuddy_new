@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-sm-6">
+      <h2>Users: {{ adminData.usersCount }}</h2>
+    </div>
+    
+    <div class="col-sm-6">
+      <h2>Total Searches: {{ adminData.searchesCount }}</h2>
+    </div>  
+  </div>
+  
+  <div class="row">
+    <h2>Top Hotel Searches</h2>
+    <div class="col-sm-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of adminData.mostSearchedHotels">
+            <td>{{row.name}}</td>
+            <td>{{row.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+  <div class="row">
+    <h2>Top Rental Searches</h2>
+    <div class="col-sm-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of adminData.mostSearchedRentals">
+            <td>{{row.name}}</td>
+            <td>{{row.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+  <div class="row">
+    <h2>Top Flight Searches</h2>
+    <div class="col-sm-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of adminData.mostSearchedFlights">
+            <td>{{row.name}}</td>
+            <td>{{row.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -25,6 +25,7 @@ import { DiscoverComponent } from './discover/discover.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -38,6 +39,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FlightsComponent,
     DiscoverComponent,
     ProfileComponent,
+    AdminComponent,
   ],
   imports: [
     CommonModule,

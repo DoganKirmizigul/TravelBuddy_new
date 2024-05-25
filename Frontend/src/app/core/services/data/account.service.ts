@@ -42,7 +42,7 @@ export class AccountService {
       confirmPassword: confirmPassword,
     });
   }
-  
+
   getUser(): Observable<any> {
     return this.http.get(this.accountBaseUrl + '/get-user', {
 
@@ -52,4 +52,11 @@ export class AccountService {
   saveUser(data: any): Observable<any> {
     return this.http.post(this.accountBaseUrl + '/save-user', data);
   }
+
+  getAdmin(): Observable<any> {
+    return this.http.get(environment.apiBaseUrl + '/api/admin/data', {
+
+    })
+  }
+
 }

@@ -8,9 +8,10 @@ import { RentalComponent } from './rental/rental.component';
 import { FlightsComponent } from './flights/flights.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
 
-const routes: Routes = [ {
-  path:'',
+const routes: Routes = [{
+  path: '',
   component: ProductsHomeComponent
 },
 {
@@ -40,6 +41,10 @@ const routes: Routes = [ {
 {
   path: 'profile', component: ProfileComponent,
   title: 'Profile',
+},
+{
+  path: 'admin', component: AdminComponent,
+  title: 'Admin',
 },
 ];
 
