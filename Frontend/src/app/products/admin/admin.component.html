@@ -1,11 +1,24 @@
 <div class="row">
-    <div class="col-sm-6">
-      <h2>Users: {{ adminData.usersCount }}</h2>
+    <div class="col-sm-3">
+      <div class="text-center">
+        <div class="icon"><i class="fa fa-3x fa-code"></i></div>
+        <div class="counter"> <span data-speed="100" data-refresh-interval="50" [attr.data-to]="adminData.usersCount"
+            data-from="0" data-seperator="true">{{ adminData.usersCount }}</span> </div>
+        <div class="seperator seperator-small"></div>
+        <p>USERS</p>
+      </div>
     </div>
-    
-    <div class="col-sm-6">
-      <h2>Total Searches: {{ adminData.searchesCount }}</h2>
-    </div>  
+  
+    <div class="col-sm-3">
+      <div class="text-center">
+        <div class="icon"><i class="fa fa-3x fa-code"></i></div>
+        <div class="counter"> <span data-speed="100" data-refresh-interval="50" [attr.data-to]="adminData.searchesCount"
+            data-from="0" data-seperator="true">{{ adminData.searchesCount }}</span> </div>
+        <div class="seperator seperator-small"></div>
+        <p>TOTAL SEARCHES</p>
+      </div>
+    </div>
+  
   </div>
   
   <div class="row">
