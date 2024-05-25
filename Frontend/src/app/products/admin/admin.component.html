@@ -1,84 +1,62 @@
 <div class="row">
-    <div class="col-sm-3">
-      <div class="text-center">
-        <div class="icon"><i class="fa fa-3x fa-code"></i></div>
-        <div class="counter"> <span data-speed="100" data-refresh-interval="50" [attr.data-to]="adminData.usersCount"
-            data-from="0" data-seperator="true">{{ adminData.usersCount }}</span> </div>
-        <div class="seperator seperator-small"></div>
-        <p>USERS</p>
-      </div>
-    </div>
-  
-    <div class="col-sm-3">
-      <div class="text-center">
-        <div class="icon"><i class="fa fa-3x fa-code"></i></div>
-        <div class="counter"> <span data-speed="100" data-refresh-interval="50" [attr.data-to]="adminData.searchesCount"
-            data-from="0" data-seperator="true">{{ adminData.searchesCount }}</span> </div>
-        <div class="seperator seperator-small"></div>
-        <p>TOTAL SEARCHES</p>
-      </div>
-    </div>
-  
-  </div>
-  
-  <div class="row">
-    <h2>Top Hotel Searches</h2>
-    <div class="col-sm-12">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Address</th>
-            <th>Count</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of adminData.mostSearchedHotels">
-            <td>{{row.name}}</td>
-            <td>{{row.count}}</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="col-sm-3">
+    <div class="text-center">
+      <div class="icon"><i class="fa fa-3x fa-code"></i></div>
+      <div class="counter"> <span data-speed="100" data-refresh-interval="50" [attr.data-to]="adminData.usersCount"
+          data-from="0" data-seperator="true">{{ adminData.usersCount }}</span> </div>
+      <div class="seperator seperator-small"></div>
+      <p>USERS</p>
     </div>
   </div>
-  
-  
-  <div class="row">
-    <h2>Top Rental Searches</h2>
-    <div class="col-sm-12">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Address</th>
-            <th>Count</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of adminData.mostSearchedRentals">
-            <td>{{row.name}}</td>
-            <td>{{row.count}}</td>
-          </tr>
-        </tbody>
-      </table>
+
+  <div class="col-sm-3">
+    <div class="text-center">
+      <div class="icon"><i class="fa fa-3x fa-code"></i></div>
+      <div class="counter"> <span data-speed="200" data-refresh-interval="50" [attr.data-to]="adminData.searchesCount"
+          data-from="0" data-seperator="true">{{ adminData.searchesCount }}</span> </div>
+      <div class="seperator seperator-small"></div>
+      <p>TOTAL SEARCHES</p>
     </div>
   </div>
-  
-  
-  <div class="row">
-    <h2>Top Flight Searches</h2>
-    <div class="col-sm-12">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Address</th>
-            <th>Count</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of adminData.mostSearchedFlights">
-            <td>{{row.name}}</td>
-            <td>{{row.count}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+</div>
+
+<div class="row">
+  <div style="width: 10px;"></div>
+  <div class="col-sm-5">
+    <h2 style="margin: 20px 0px 5px 0px;">Top Hotel Searches</h2>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let row of adminData.mostSearchedHotels">
+            {{row.name}}
+            <span class="badge badge-primary badge-pill">{{row.count}}</span>
+        </li>
+    </ul>
   </div>
+
+  <div style="width: 10px;"></div>
+  <div class="col-sm-5">
+    <h2 style="margin: 20px 0px 5px 0px;">Top Rental Searches</h2>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let row of adminData.mostSearchedRentals">
+            {{row.name}}
+            <span class="badge badge-primary badge-pill">{{row.count}}</span>
+        </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div style="width: 10px;"></div>
+  <div class="col-sm-5">
+    <h2 style="margin: 20px 0px 5px 0px;">Top Flight Searches</h2>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let row of adminData.mostSearchedFlights">
+            {{row.name}}
+            <span class="badge badge-primary badge-pill">{{row.count}}</span>
+        </li>
+    </ul>
+  </div>
+
+</div>

@@ -15413,13 +15413,13 @@ body.breakpoint-xs hr.space-xxlg, body.breakpoint-sm hr.space-xxlg {
 .seperator::after,
 .separator::before,
 .separator::after {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #9896a6;
   content: "";
   display: inline-block;
   height: 0.65em;
   margin: 0 -4px 0 -100%;
   vertical-align: top;
-  width: 50%;
+  width: 100%;
 }
 
 .seperator.seperator-dark::before,
