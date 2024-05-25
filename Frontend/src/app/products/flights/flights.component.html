@@ -68,7 +68,7 @@
 <div class="card-container">
     <mat-card *ngFor="let item of searchResult" class="example-card">
         <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="example-header-image"><img src="{{ item.airlineImage }}" style="max-width: 50px;"></div>
             <mat-card-title>{{item.bounds[0].segments[0].operatingCarrier.name}}</mat-card-title>
             <mat-card-subtitle>$ {{this.searchResult[0].travelerPrices[0].price.price.value /100}}</mat-card-subtitle>
         </mat-card-header>

@@ -90,6 +90,22 @@ export class FlightsComponent implements OnInit {
         response => {
           if(response.data !== null && response.data.flights !== null && response.data.flights.length > 0){
             this.searchResult = response.data.flights
+            this.searchResult.map(x => {
+              switch (x.bounds[0].segments[0].operatingCarrier.code) {
+                case 'AA':
+                  x.airlineImage = 'https://www.gotogate.com/system/spa/ibeclient/static/media/AA.9da723fc.png';
+                  break;
+                case 'UA':
+                  x.airlineImage = 'https://cdn.airpaz.com/cdn-cgi/image/w=1024,h=1024,f=webp,fit=scale-down/rel-0275/airlines/201x201/UA.png';
+                  break;
+                case 'NK':
+                  x.airlineImage = 'https://content.spirit.com/a/1679';
+                  break;
+                default:
+                  console.log('Missing logo of airline code=', x.bounds[0].segments[0].operatingCarrier.code, x.bounds[0].segments[0].operatingCarrier.name);
+                  break;
+              }
+            });
           }
           else{
             this.searchResult = []
