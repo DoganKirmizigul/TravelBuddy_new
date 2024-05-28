@@ -13,9 +13,7 @@ export class RentalComponent implements OnInit {
   filteredFromOptions: Observable<any[]>;
   filteredToOptions: Observable<any[]>;
   submitted = false;
-  searchResult = []
-
-  
+  searchResult = [] 
 
   constructor(private rentalService: RentalService, private formBuilder: FormBuilder) { }
   
@@ -25,6 +23,7 @@ export class RentalComponent implements OnInit {
       to: ['', [Validators.required]],
       fromDate: ['', [Validators.required]],
       toDate: ['', [Validators.required]],
+      sortBy: ['asc', [Validators.required]],
     });
 
     this.form.get('from')!.valueChanges.pipe(
@@ -50,8 +49,6 @@ export class RentalComponent implements OnInit {
     ).subscribe(data => {
       this.filteredToOptions = of(data);
     });
-
-
   }
 
   handleFromAutoComplete(value: any): Observable<any[]> {
@@ -102,7 +99,13 @@ export class RentalComponent implements OnInit {
       this.f['toDate'].value).subscribe(
         response => {
           if(response.data !== null && response.data.search_results !== null && response.data.search_results.length > 0) {
-            this.searchResult = response.data.search_results
+            if (this.f['sortBy'].value == 'asc') {
+              this.searchResult = response.data.search_results.sort(function(a,b) { return a.pricing_info.drive_away_price - b.pricing_info.drive_away_price})
+            } else {
+              this.searchResult = response.data.search_results.sort(function(a,b) { return b.pricing_info.drive_away_price - a.pricing_info.drive_away_price})
+            }
+
+            // this.searchResult = response.data.search_results
           }
           else{
             this.searchResult = []

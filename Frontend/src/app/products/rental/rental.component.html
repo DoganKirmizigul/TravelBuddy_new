@@ -72,6 +72,20 @@
             </mat-grid-list>
         </div>
     
+        <div style="display: flex; padding: 5px 0px 5px 50px;">
+            <h5 style="font-size: large; padding-right: 20px;">Sort By</h5>
+            <label class="p-radio radio-color-warning" style="padding-right: 20px;">
+                <span>Asc</span>
+                <input type="radio" name="sortBy" formControlName="sortBy" value="asc">
+                <span class="p-radio-style"></span>
+            </label>
+            <label class="p-radio radio-color-warning">
+                <span>Desc</span>
+                <input type="radio" name="sortBy" formControlName="sortBy" value="desc">
+                <span class="p-radio-style"></span>
+            </label>
+        </div>
+        
         <mat-grid-list cols="1" rowHeight="50px" class="center-content">
             <mat-grid-tile>
                 <button mat-raised-button color="primary">Search Rental</button>
