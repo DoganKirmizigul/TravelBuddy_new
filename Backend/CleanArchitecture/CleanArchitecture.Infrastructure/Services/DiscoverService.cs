@@ -35,7 +35,7 @@ namespace CleanArchitecture.Infrastructure.Services
         {
             var finalResult = new List<DiscoverDataDetailResponse.DiscoverProductDetail>();
 
-            var lastSearch = _context.FlightSearches.OrderByDescending(o => o.SearchDateTime).FirstOrDefault();
+            var lastSearch = _context.FlightSearches.Where(w => w.SearchedBy == _authenticatedUser.UserId).OrderByDescending(o => o.SearchDateTime).FirstOrDefault();
             var city = "";
             if (lastSearch != null)
             {

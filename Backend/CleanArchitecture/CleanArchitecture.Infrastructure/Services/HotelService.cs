@@ -31,6 +31,7 @@ namespace CleanArchitecture.Infrastructure.Services
 
         public async Task<List<HotelAutoCompleteResponse>> HotelAutoCompleteSearch(string query)
         {
+            List<HotelAutoCompleteResponse> finalResult = new List<HotelAutoCompleteResponse>();
 
             var client = new HttpClient();
             var request = new HttpRequestMessage
@@ -38,19 +39,39 @@ namespace CleanArchitecture.Infrastructure.Services
                 Method = HttpMethod.Get,
                 RequestUri = new Uri($"https://booking-com.p.rapidapi.com/v1/hotels/locations?name={query}&locale=en-gb"),
                 Headers =
-        {
-            { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
-            { "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
-        },
+                {
+                    { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
+                    { "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
+                },
             };
             using (var response = await client.SendAsync(request))
             {
                 //response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(body);
-                return JsonConvert.DeserializeObject<List<HotelAutoCompleteResponse>>(body);
-
+                finalResult = JsonConvert.DeserializeObject<List<HotelAutoCompleteResponse>>(body);
             }
+
+            request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri($"https://sky-scrapper.p.rapidapi.com/api/v1/flights/searchAirport?query={query}"),
+                Headers =
+                {
+                    { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
+                    { "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
+                },
+            };
+            using (var response = await client.SendAsync(request))
+            {
+                //response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(body);
+                var results = JsonConvert.DeserializeObject<List<HotelAutoCompleteResponse>>(body);
+                finalResult.AddRange(results);
+            }
+
+            return finalResult;
         }
 
         public async Task<HotelSearchResponse> HotelSearch(HotelSearchRequest inputRequest)
@@ -111,7 +132,7 @@ namespace CleanArchitecture.Infrastructure.Services
                                 result.error = bodyDetail.detail[0].msg;
                                 break;
                         }
-                        
+
                     }
                     //return body2;
                 }
