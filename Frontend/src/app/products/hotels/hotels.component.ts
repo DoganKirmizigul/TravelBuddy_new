@@ -22,6 +22,7 @@ export class HotelsComponent implements OnInit {
       location: ['', [Validators.required]],
       fromDate: ['', [Validators.required]],
       toDate: ['', [Validators.required]],
+      sortBy: ['price', [Validators.required]],
     });
 
     this.form.get('location')!.valueChanges.pipe(
@@ -75,10 +76,14 @@ export class HotelsComponent implements OnInit {
     else{
       this.hotelService.search(this.f['location'].value['dest_id']      , 
       this.f['fromDate'].value,
-      this.f['toDate'].value).subscribe(
+      this.f['toDate'].value, this.f['sortBy'].value).subscribe(
         response => {
           if(response.result !== null && response.result.length > 0){
-            this.searchResult = response.result
+            if (this.f['sortBy'].value == 'popularity') {
+              this.searchResult = response.result.sort(function(a, b){return b.review_score-a.review_score});
+            } else {
+              this.searchResult = response.result.sort(function(a, b){return a.price_breakdown.gross_price - b.price_breakdown.gross_price});
+            }
           }
           else{
             this.searchResult = []

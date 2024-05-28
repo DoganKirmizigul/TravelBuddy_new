@@ -52,24 +52,24 @@ namespace CleanArchitecture.Infrastructure.Services
                 finalResult = JsonConvert.DeserializeObject<List<HotelAutoCompleteResponse>>(body);
             }
 
-            request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri($"https://sky-scrapper.p.rapidapi.com/api/v1/flights/searchAirport?query={query}"),
-                Headers =
-                {
-                    { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
-                    { "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
-                },
-            };
-            using (var response = await client.SendAsync(request))
-            {
-                //response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(body);
-                var results = JsonConvert.DeserializeObject<List<HotelAutoCompleteResponse>>(body);
-                finalResult.AddRange(results);
-            }
+            //request = new HttpRequestMessage
+            //{
+            //    Method = HttpMethod.Get,
+            //    RequestUri = new Uri($"https://sky-scrapper.p.rapidapi.com/api/v1/flights/searchAirport?query={query}"),
+            //    Headers =
+            //    {
+            //        { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
+            //        { "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
+            //    },
+            //};
+            //using (var response = await client.SendAsync(request))
+            //{
+            //    //response.EnsureSuccessStatusCode();
+            //    var body = await response.Content.ReadAsStringAsync();
+            //    Console.WriteLine(body);
+            //    var results = JsonConvert.DeserializeObject<List<HotelAutoCompleteResponse>>(body);
+            //    finalResult.AddRange(results);
+            //}
 
             return finalResult;
         }
@@ -81,7 +81,7 @@ namespace CleanArchitecture.Infrastructure.Services
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri($"https://booking-com.p.rapidapi.com/v1/hotels/search?checkout_date={inputRequest.CheckoutDate.ToString("yyyy-MM-dd")}&order_by=popularity&filter_by_currency=USD&room_number=1&dest_id={inputRequest.LocationId}&dest_type=city&adults_number=2&checkin_date={inputRequest.CheckinDate.ToString("yyyy-MM-dd")}&locale=en-us&units=metric&include_adjacency=true&categories_filter_ids=class%3A%3A2%2Cclass%3A%3A4%2Cfree_cancellation%3A%3A1&page_number=0&children_ages=5%2C0"),
+                RequestUri = new Uri($"https://booking-com.p.rapidapi.com/v1/hotels/search?checkout_date={inputRequest.CheckoutDate.ToString("yyyy-MM-dd")}&order_by={inputRequest.SortBy}&filter_by_currency=USD&room_number=1&dest_id={inputRequest.LocationId}&dest_type=city&adults_number=2&checkin_date={inputRequest.CheckinDate.ToString("yyyy-MM-dd")}&locale=en-us&units=metric&include_adjacency=true&categories_filter_ids=class%3A%3A2%2Cclass%3A%3A4%2Cfree_cancellation%3A%3A1&page_number=0&children_ages=5%2C0"),
                 Headers =
                 {
                     { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey")},

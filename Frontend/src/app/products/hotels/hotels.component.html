@@ -56,6 +56,20 @@
             </mat-grid-list>
         </div>
 
+        <div style="display: flex; padding: 5px 0px 5px 50px;">
+            <h5 style="font-size: large; padding-right: 20px;">Sort By</h5>
+            <label class="p-radio radio-color-warning" style="padding-right: 20px;">
+                <span>Rating</span>
+                <input type="radio" name="sortBy" formControlName="sortBy" value="popularity">
+                <span class="p-radio-style"></span>
+            </label>
+            <label class="p-radio radio-color-info">
+                <span>Price</span>
+                <input type="radio" name="sortBy" formControlName="sortBy" value="price">
+                <span class="p-radio-style"></span>
+            </label>
+        </div>
+
         <mat-grid-list cols="1" rowHeight="50px" class="center-content">
             <mat-grid-tile>
                 <button mat-raised-button color="primary">Search Hotels</button>
@@ -64,34 +78,6 @@
     </form>
 
 </mat-card>
-
-<!-- <div class="grid-container">
-    <mat-grid-list cols="1" *ngFor="let item of searchResult">
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>{{item.hotel_name}}</mat-card-title>
-                  <mat-card-subtitle>{{item.address}}</mat-card-subtitle>
-                </mat-card-header>
-                <img height="400px" width="300px" mat-card-image src={{item.max_photo_url}} alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    Review: {{item.review_score}}
-                  </p>
-                  <p>
-                    Price: {{item.price_breakdown.currency}} {{item.price_breakdown.gross_price}}
-                  </p>
-                </mat-card-content>
-                
-              </mat-card>
-        </mat-grid-tile>
-        
-
-    </mat-grid-list>
-</div>
-   -->
-
 
 <div class="card-container">
     <mat-card *ngFor="let item of searchResult" class="example-card">

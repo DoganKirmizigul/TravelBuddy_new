@@ -19,11 +19,12 @@ export class HotelsService {
     );
   }
 
-  search(locationId: string, from: any, to:any){
+  search(locationId: string, from: any, to:any, sortBy: any){
     return this.httpClient.post<any>(`${this.productBaseUrl}/search`, {
       "locationId": locationId,
       "checkinDate": from,
-      "checkoutDate": to
+      "checkoutDate": to,
+      "sortBy": sortBy
     })
     .pipe(
       map(response => response) // Extract the 'data' array from the response

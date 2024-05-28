@@ -13,5 +13,6 @@ namespace CleanArchitecture.Core.DTOs.Hotel
         public DateTime CheckinDate { get; set; }
         [Required]
         public DateTime CheckoutDate { get; set; }
+        public string SortBy { get; set; }
     }
 }
