@@ -60,7 +60,12 @@ export class RentalComponent implements OnInit {
       return of([]); // Return observable of empty array if no value
     }
     // Replace with your actual API URL
-    return this.rentalService.autoComplete(typeof value === 'string' ? value : value.id)
+    return this.rentalService.autoComplete(typeof value === 'string' ? value : value.id).pipe(
+      catchError(error => {
+        console.error('Error occurred:', error);
+        return of([]);
+      })
+    )
   }
 
   handleToAutoComplete(value: any): Observable<any[]> {
@@ -69,7 +74,12 @@ export class RentalComponent implements OnInit {
       return of([]); // Return observable of empty array if no value
     }
     // Replace with your actual API URL
-    return this.rentalService.autoComplete(typeof value === 'string' ? value : value.id)
+    return this.rentalService.autoComplete(typeof value === 'string' ? value : value.id).pipe(
+      catchError(error => {
+        console.error('Error occurred:', error);
+        return of([]);
+      })
+    )
   }
 
   displayFn(option: any): string {
@@ -91,7 +101,7 @@ export class RentalComponent implements OnInit {
       this.f['fromDate'].value,
       this.f['toDate'].value).subscribe(
         response => {
-          if(response.data !== null && response.data.search_results !== null && response.data.search_results.length > 0){
+          if(response.data !== null && response.data.search_results !== null && response.data.search_results.length > 0) {
             this.searchResult = response.data.search_results
           }
           else{

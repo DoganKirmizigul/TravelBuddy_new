@@ -58,7 +58,12 @@ export class FlightsComponent implements OnInit {
       return of([]); // Return observable of empty array if no value
     }
     // Replace with your actual API URL
-    return this.flightService.autoComplete(typeof value === 'string' ? value : value.iataCode)
+    return this.flightService.autoComplete(typeof value === 'string' ? value : value.iataCode).pipe(
+      catchError(error => {
+        console.error('Error occurred:', error);
+        return of([]);
+      })
+    )
   }
 
   handleToAutoComplete(value: any): Observable<any[]> {
@@ -67,7 +72,12 @@ export class FlightsComponent implements OnInit {
       return of([]); // Return observable of empty array if no value
     }
     // Replace with your actual API URL
-    return this.flightService.autoComplete(typeof value === 'string' ? value : value.iataCode)
+    return this.flightService.autoComplete(typeof value === 'string' ? value : value.iataCode).pipe(
+      catchError(error => {
+        console.error('Error occurred:', error);
+        return of([]);
+      })
+    )
   }
 
   displayFn(option: any): string {
@@ -101,7 +111,7 @@ export class FlightsComponent implements OnInit {
                 case 'NK':
                   x.airlineImage = 'https://content.spirit.com/a/1679';
                   break;
-                                  case 'BA':
+                case 'BA':
                   x.airlineImage = 'https://cdn.freelogovectors.net/wp-content/uploads/2023/09/british_airways_logo-freelogovectors.net_.png';
                   break;
                 case 'VS':

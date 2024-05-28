@@ -49,7 +49,13 @@ export class HotelsComponent implements OnInit {
       return of([]); // Return observable of empty array if no value
     } else {
       // Replace with your actual API URL
-      return this.hotelService.autoComplete(typeof value === 'string' ? value : value.dest_id)
+      return this.hotelService.autoComplete(typeof value === 'string' ? value : value.dest_id).pipe(
+        catchError(error => {
+          console.error('Error occurred:', error);
+          return of([]);
+        })
+  
+      )
     }
   }
 
