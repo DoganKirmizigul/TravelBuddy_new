@@ -17,8 +17,21 @@
 
 
         <div class="container">
+
+            <div *ngIf="isLoading" style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <h2 style="text-align: center; font-size: 60px;">Loading...</h2>
+            </div>
+
             <!-- Gallery -->
-            <div class="grid-layout grid-2-columns" data-margin="20" data-item="grid-item" data-lightbox="gallery">
+            <div class="grid-layout grid-3-columns" data-margin="20" data-item="grid-item" data-lightbox="gallery" *ngIf="!isLoading">
+                <div class="grid-item" *ngFor="let item of data">
+                    <label style="font-weight: 600; text-decoration: underline;">{{ item.name }} - {{ item.cityName}}</label>
+                    <label>{{ item.shortDescription }}</label>
+                    <a class="image-hover-zoom" data-lightbox="gallery-image"><img src="{{item.primaryPhoto.small}}"></a>
+                </div>
+            </div>
+
+            <div class="grid-layout grid-2-columns" data-margin="20" data-item="grid-item" data-lightbox="gallery" style="display: none;">
                 <div class="grid-item">
                     <a class="image-hover-zoom" data-lightbox="gallery-image"><img src="/assets/polo/images/gallery/1.jpg"></a>
                 </div>

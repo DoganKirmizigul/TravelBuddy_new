@@ -59,4 +59,10 @@ export class AccountService {
     })
   }
 
+  getDiscover(): Observable<any> {
+    return this.http.get(environment.apiBaseUrl + '/api/Discover/data', {
+
+    })
+  }
+
 }

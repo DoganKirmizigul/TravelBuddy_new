@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { AccountService } from 'src/app/core/services/data/account.service';
 
 @Component({
   selector: 'ai-discover',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscoverComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService: AccountService, private toastr: ToastrService) { }
+
+  data: any;
+  isLoading = true;
 
   ngOnInit(): void {
+    this.accountService.getDiscover().subscribe(
+      response => {
+        this.data = response;
+        this.isLoading = false;
+      })
   }
 
 }

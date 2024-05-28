@@ -48,6 +48,7 @@ namespace CleanArchitecture.Infrastructure
             services.AddTransient<IFlightService, FlightService>();
             services.AddTransient<IRentalService, RentalService>();
             services.AddTransient<IAdminService, AdminService>();
+            services.AddTransient<IDiscoverService, DiscoverService>();
             #endregion
             services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
             services.AddAuthentication(options =>
