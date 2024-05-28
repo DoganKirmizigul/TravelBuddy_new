@@ -101,6 +101,15 @@ export class FlightsComponent implements OnInit {
                 case 'NK':
                   x.airlineImage = 'https://content.spirit.com/a/1679';
                   break;
+                                  case 'BA':
+                  x.airlineImage = 'https://cdn.freelogovectors.net/wp-content/uploads/2023/09/british_airways_logo-freelogovectors.net_.png';
+                  break;
+                case 'VS':
+                  x.airlineImage = 'https://i.pinimg.com/564x/0a/2a/12/0a2a12a6df3b43adc555a9e2768bd577.jpg';
+                  break;
+                case 'Z0':
+                  x.airlineImage = 'https://mb.cision.com/Public/21212/0/8cbcf0f7597a0574_800x800ar.png';
+                  break;
                 default:
                   console.log('Missing logo of airline code=', x.bounds[0].segments[0].operatingCarrier.code, x.bounds[0].segments[0].operatingCarrier.name);
                   break;
