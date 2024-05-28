@@ -59,7 +59,7 @@ namespace CleanArchitecture.Infrastructure.Services
             };
             using (var response = await client.SendAsync(request))
             {
-                response.EnsureSuccessStatusCode();
+                //response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(body);
                 var result = JsonConvert.DeserializeObject<DiscoverDataResponse>(body);
@@ -68,37 +68,40 @@ namespace CleanArchitecture.Infrastructure.Services
                 {
                     foreach (var product in result.Data.Products)
                     {
-                        request = new HttpRequestMessage
+                        if ((city.ToLower() == "lon" && product.CityName.ToLower() == "london") || city.ToLower() != "lon")
                         {
-                            Method = HttpMethod.Get,
-                            RequestUri = new Uri($"https://booking-com18.p.rapidapi.com/attraction/search?id={product.id}"),
-                            Headers =
+                            request = new HttpRequestMessage
                             {
-                                { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
-                                { "X-RapidAPI-Host", "booking-com18.p.rapidapi.com" },
-                            },
-                        };
-                        using (var res = await client.SendAsync(request))
-                        {
-                            res.EnsureSuccessStatusCode();
-                            body = await res.Content.ReadAsStringAsync();
-                            var result2 = JsonConvert.DeserializeObject<DiscoverDataDetailResponse>(body);
-
-                            if (result2 != null && result2.Data != null && result2.Data.Products != null)
-                            {
-                                foreach (var item in result2.Data.Products)
+                                Method = HttpMethod.Get,
+                                RequestUri = new Uri($"https://booking-com18.p.rapidapi.com/attraction/search?id={product.id}"),
+                                Headers =
                                 {
-                                    finalResult.Add(new DiscoverDataDetailResponse.DiscoverProductDetail()
+                                    { "X-RapidAPI-Key", _configuration.GetValue<string>("RapidAPIKey") },
+                                    { "X-RapidAPI-Host", "booking-com18.p.rapidapi.com" },
+                                },
+                            };
+                            using (var res = await client.SendAsync(request))
+                            {
+                                res.EnsureSuccessStatusCode();
+                                body = await res.Content.ReadAsStringAsync();
+                                var result2 = JsonConvert.DeserializeObject<DiscoverDataDetailResponse>(body);
+
+                                if (result2 != null && result2.Data != null && result2.Data.Products != null)
+                                {
+                                    foreach (var item in result2.Data.Products)
                                     {
-                                        Id = item.Id,
-                                        CityName = product.CityName,
-                                        Name = item.Name,
-                                        ShortDescription = item.ShortDescription,
-                                        PrimaryPhoto = new DiscoverDataDetailResponse.PrimaryPhoto()
+                                        finalResult.Add(new DiscoverDataDetailResponse.DiscoverProductDetail()
                                         {
-                                            Small = item.PrimaryPhoto.Small,
-                                        }
-                                    });
+                                            Id = item.Id,
+                                            CityName = product.CityName,
+                                            Name = item.Name,
+                                            ShortDescription = item.ShortDescription,
+                                            PrimaryPhoto = new DiscoverDataDetailResponse.PrimaryPhoto()
+                                            {
+                                                Small = item.PrimaryPhoto.Small,
+                                            }
+                                        });
+                                    }
                                 }
                             }
                         }
