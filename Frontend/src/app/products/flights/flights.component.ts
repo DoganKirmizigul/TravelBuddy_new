@@ -23,6 +23,7 @@ export class FlightsComponent implements OnInit {
       from: ['', [Validators.required]],
       to: ['', [Validators.required]],
       toDate: ['', [Validators.required]],
+      sortBy: ['asc', [Validators.required]],
     });
 
     this.form.get('from')!.valueChanges.pipe(
@@ -99,13 +100,16 @@ export class FlightsComponent implements OnInit {
       this.f['toDate'].value).subscribe(
         response => {
           if(response.data !== null && response.data.flights !== null && response.data.flights.length > 0){
-            if (this.f['sortBy'].value == 'asc') {
-              this.searchResult = response.data.flights.sort(function(a,b) { return a.travelerPrices[0].price.price.value - b.travelerPrices[0].price.price.value})
-            } else {
-              this.searchResult = response.data.flights.sort(function(a,b) { return b.travelerPrices[0].price.price.value - a.travelerPrices[0].price.price.value})
+            try {
+              if (this.f['sortBy'].value == 'asc') {
+                this.searchResult = response.data.flights.sort(function(a,b) { return a.travelerPrices[0].price.price.value - b.travelerPrices[0].price.price.value})
+              } else {
+                this.searchResult = response.data.flights.sort(function(a,b) { return b.travelerPrices[0].price.price.value - a.travelerPrices[0].price.price.value})
+              }  
+            } catch (ex) {
+              console.log(ex);
             }
 
-            
             this.searchResult.map(x => {
               switch (x.bounds[0].segments[0].operatingCarrier.code) {
                 case 'AA':
